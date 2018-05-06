@@ -1,11 +1,6 @@
-sudo cp nemo.css /usr/share/themes/Ambiance/gtk-3.0/apps/
-
-if [ -f /usr/share/themes/Ambiance/gtk-3.0/gtk-main.css ];
+if [ ! -f ~/.themes/Ambiance ]
 then
-	echo "@import url(\"apps/nemo.css\");" | sudo tee -a /usr/share/themes/Ambiance/gtk-3.0/gtk-main.css
-else
-	if [ -f /usr/share/themes/Ambiance/gtk-3.0/gtk.css ];
-	then
-		echo "@import url(\"apps/nemo.css\");" | sudo tee -a /usr/share/themes/Ambiance/gtk-3.0/gtk.css
-	fi
+mkdir ~/.themes/Ambiance -p
 fi
+
+cp ./Ambiance ~/.themes/ -r

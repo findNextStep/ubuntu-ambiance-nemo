@@ -4,3 +4,5 @@ mkdir ~/.themes/Ambiance -p
 fi
 
 cp ./Ambiance ~/.themes/ -r
+
+nemo -q
